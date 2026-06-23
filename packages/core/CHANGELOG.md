@@ -1,5 +1,16 @@
 # emdash
 
+## 0.22.1
+
+### Patch Changes
+
+- [#1553](https://github.com/emdash-cms/emdash/pull/1553) [`7fca12f`](https://github.com/emdash-cms/emdash/commit/7fca12f0a8fbe3c1c0f6ea0d2a9826eb51a1da57) Thanks [@marcusbellamyshaw-cell](https://github.com/marcusbellamyshaw-cell)! - Byline avatar hydration now includes the media LQIP placeholder fields ([#1457](https://github.com/emdash-cms/emdash/issues/1457)). Content byline credits already folded in the avatar's `avatarStorageKey` and `avatarAlt` via the media join, but dropped the `blurhash`/`dominant_color` placeholder columns, so author avatars couldn't render a low-quality image placeholder while loading even though the media stored one. `BylineSummary` now also carries `avatarBlurhash` and `avatarDominantColor`, populated by `getContentBylines`, `getContentBylinesMany`, and `findByUserIds` (and surfaced in the byline API response), so themes can paint a blurhash/dominant-colour placeholder for byline avatars exactly as they can for other media.
+
+- Updated dependencies []:
+  - @emdash-cms/admin@0.22.1
+  - @emdash-cms/auth@0.22.1
+  - @emdash-cms/gutenberg-to-portable-text@0.22.1
+
 ## 0.22.0
 
 ### Minor Changes
